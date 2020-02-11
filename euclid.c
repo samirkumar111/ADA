@@ -1,22 +1,18 @@
 #include<stdio.h>
-int gcd(int m,int n)
-{
- int rem;
- while(n!=0)
- {
-  rem=m%n;
-  m=n;
-  n=rem;
- }
- return m;
+int euclid(int a,int b)
+{ if(b==0)
+{return a;}
+ else
+ {return euclid(b,a%b);}
 }
+
 
 int main()
 {
- int m,n;
- printf("Enter m,n \n");
- scanf("%d%d",&m,&n);
- m=gcd(m,n);
- printf("Gcd is %d",m);
+ int a,b;
+ printf("Enter a,b \b");
+ scanf("%d%d",&a,&b);
+ a=gcd(a,b);
+ printf("Gcd is %d",a);
  return 0;
 }
