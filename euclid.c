@@ -1,9 +1,9 @@
 #include<stdio.h>
-int euclid(int a,int b)
+int gcd(int a,int b)
 { if(b==0)
 {return a;}
  else
- {return euclid(b,a%b);}
+ {return gcd(b,a%b);}
 }
 
 
